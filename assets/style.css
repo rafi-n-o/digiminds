@@ -1,0 +1,13 @@
+/* style.css */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4f46e5; /* Warna indigo */
+}

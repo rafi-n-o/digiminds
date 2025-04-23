@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aplikasi absensi dan faktur untuk UMKM. Praktis, cepat, dan bisa diakses di mana saja."
+    />
+    <title>Digiminds – Solusi Bisnis UMKM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body class="bg-gray-100 font-sans text-gray-900">
+    <div id="header"></div>
+
+    <section id="produk" class="container mx-auto p-6 md:p-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        Produk Kami
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-all"
+        >
+          <h3 class="text-2xl font-semibold">📍 Absensi Online</h3>
+          <p class="mt-4">
+            Pantau kehadiran karyawan secara real-time, dari mana saja dengan
+            teknologi berbasis lokasi.
+          </p>
+          <a
+            href="/absensi"
+            class="mt-6 inline-block text-indigo-600 font-semibold hover:underline"
+            >Pelajari Selengkapnya</a
+          >
+        </div>
+
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-all"
+        >
+          <h3 class="text-2xl font-semibold">🧾 Faktur Digital</h3>
+          <p class="mt-4">
+            Buat faktur dengan cepat, kirim otomatis, dan lacak status
+            pembayaran langsung dari aplikasi.
+          </p>
+          <a
+            href="/faktur"
+            class="mt-6 inline-block text-indigo-600 font-semibold hover:underline"
+            >Pelajari Selengkapnya</a
+          >
+        </div>
+
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-all"
+        >
+          <h3 class="text-2xl font-semibold">🔧 Fitur Lainnya</h3>
+          <p class="mt-4">
+            Kami juga menawarkan berbagai fitur tambahan untuk meningkatkan
+            produktivitas tim dan bisnis Anda.
+          </p>
+          <a
+            href="/fitur"
+            class="mt-6 inline-block text-indigo-600 font-semibold hover:underline"
+            >Pelajari Selengkapnya</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 py-12">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Apa Kata Pengguna Kami?</h2>
+        <div class="flex flex-wrap justify-center gap-12">
+          <div class="max-w-xs bg-white p-6 rounded-lg shadow-md">
+            <p class="text-lg">
+              "Digiminds memudahkan kami dalam mengelola absensi dan faktur.
+              Sangat user-friendly!"
+            </p>
+            <p class="mt-4 font-semibold">Aulia, Owner Toko ABC</p>
+          </div>
+          <div class="max-w-xs bg-white p-6 rounded-lg shadow-md">
+            <p class="text-lg">
+              "Kami bisa menghemat waktu dan tenaga berkat aplikasi ini. Sangat
+              recommended!"
+            </p>
+            <p class="mt-4 font-semibold">Budi, Freelancer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+    <script>
+      fetch("/components/header.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("header").innerHTML = html));
+
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
+    </script>
+  </body>
+</html>
